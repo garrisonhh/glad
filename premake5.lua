@@ -1,7 +1,10 @@
 project "glad"
-	kind "StaticLib"
+	kind "SharedLib"
 	language "C"
 	cdialect "c99"
+
+	warnings "Off"
+	buildoptions "-fPIC"
 
 	targetdir ("bin/%{prj.name}")
 	objdir ("obj/%{prj.name}")
@@ -14,8 +17,6 @@ project "glad"
 	includedirs {
 		"./include/"
 	}
-
-	warnings "Off"
 
 	if os.target() == "windows" then
 		makesettings { "CC=gcc" }
