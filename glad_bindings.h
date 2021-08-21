@@ -22,10 +22,6 @@
 #ifndef __glad_h_
 #define __glad_h_
 
-// THIS LINE ADDITION BY ME (GARRISONHH)
-// everything else is unmodified
-#pragma GCC system_header
-
 #ifdef __gl_h_
 #error OpenGL header already included, remove this include, glad already provides it
 #endif
@@ -89,7 +85,7 @@ GLAPI int gladLoadGL(void);
 
 GLAPI int gladLoadGLLoader(GLADloadproc);
 
-#include <KHR/khrplatform.h>
+#include "khrplatform.h"
 typedef unsigned int GLenum;
 typedef unsigned char GLboolean;
 typedef unsigned int GLbitfield;
